@@ -483,14 +483,17 @@ kbd {
   }
 
   .modal-cont {
-    width: 95%;
+    width: calc(100% - 2rem);
     max-width: 95%;
-    margin: 1rem;
-    border-radius: 16px;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    border-radius: 16px;
   }
 
   .modal-cont > * {
@@ -504,6 +507,7 @@ kbd {
     flex-direction: column;
     justify-content: center;
     min-width: 140px;
+    flex-shrink: 0;
   }
 
   .modal-header h2 {
@@ -617,8 +621,12 @@ kbd {
   }
 
   .modal-cont {
-    width: 98%;
+    width: calc(100% - 2rem);
     max-height: 90vh;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .modal-header {
