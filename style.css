@@ -441,8 +441,32 @@ kbd {
   .toolbox-cont {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+  }
+
+  .toolbox-priority-cont {
+    gap: 0.75rem;
+  }
+
+  .filter-label {
+    font-size: 0.8rem;
+  }
+
+  .color,
+  .clearFilter {
+    height: 35px;
+    width: 35px;
+  }
+
+  .add-btn,
+  .remove-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 
   .brand-section,
@@ -460,49 +484,181 @@ kbd {
 
   .modal-cont {
     width: 95%;
+    max-width: 95%;
     margin: 1rem;
     border-radius: 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .modal-cont > * {
+    flex: 1;
+  }
+
+  .modal-header {
+    padding: 1.5rem 1rem;
+    writing-mode: horizontal-tb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 140px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .modal-header p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .textArea-cont {
+    padding: 1rem;
+    min-height: 120px;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  .priority-colors-container {
+    padding: 1rem;
+    flex-shrink: 0;
+  }
+
+  .priority-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
   }
 
   .priority-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .priority-color {
+    height: 65px;
+  }
+
+  .priority-text {
+    font-size: 0.8rem;
+  }
+
+  .modal-footer {
+    padding-bottom: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .modal-footer small {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  kbd {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.65rem;
   }
 
   .btn-text {
     display: none;
   }
-
-  .modal-header {
-    padding: 1.5rem 1.5rem 1rem;
-  }
-
-  .modal-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .textArea-cont {
-    padding: 1.5rem;
-    min-height: 120px;
-  }
-
-  .priority-colors-container {
-    padding: 1.5rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .color-filters {
-    flex-wrap: wrap;
+  .toolbox-cont {
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
   }
 
-  .color {
-    height: 35px;
-    width: 35px;
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .brand-title i {
+    font-size: 1rem;
+  }
+
+  .color-filters {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .color,
+  .clearFilter {
+    height: 32px;
+    width: 32px;
   }
 
   .toolbox-priority-cont {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .add-btn,
+  .remove-btn {
+    padding: 0.5rem 1rem;
+    gap: 0.35rem;
+  }
+
+  .add-btn i,
+  .remove-btn i {
+    font-size: 0.9rem;
+  }
+
+  .modal-cont {
+    width: 98%;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    min-width: 120px;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1rem;
+  }
+
+  .modal-header p {
+    font-size: 0.7rem;
+  }
+
+  .textArea-cont {
+    padding: 0.85rem;
+    min-height: 100px;
+    font-size: 0.9rem;
+  }
+
+  .priority-colors-container {
+    padding: 0.85rem;
+  }
+
+  .priority-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .priority-grid {
+    gap: 0.5rem;
+  }
+
+  .priority-color {
+    height: 58px;
+  }
+
+  .priority-text {
+    font-size: 0.75rem;
   }
 }
 
